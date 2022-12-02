@@ -21,9 +21,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
          $statement->bind_param("is",$pid,$name,);
 
          $statement->execute();
+        
+         $sql = "SELECT * FROM distributer";
+         $result = $conn->query($sql);
 
-         echo "ADDED: ".$pid.", ".$name."<br>";
 
+         if ($result->num_rows > 0) {
+         echo "<table><tr><th>ID</th><th>Name</th></tr>";
+         // output data of each row
+         while($row = $result->fetch_assoc()) {
+            echo "<tr><td>" . $row["id"]. "</td><td>" . $row["name"]. "</td></tr>";
+         }
+         echo "</table>";
+         } else {
+         echo "0 results";
+         }
          $statement->close();
          $conn->close();
          }
