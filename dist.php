@@ -22,6 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
          $statement->execute();
         
+         // Display Table code
+        
          $sql = "SELECT * FROM distributer";
          $result = $conn->query($sql);
 
