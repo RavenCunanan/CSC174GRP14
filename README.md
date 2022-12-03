@@ -1,6 +1,6 @@
 CSC 174 Group 14: Sam Lam, Raven Cunanan
 
-statement.html is the html file that handles the front end, and dist.php handles in the inserts and selects for sql.
+statement.html is the html file that handles the front end, and dist.php handles the inserts and selects for sql.
 
 This is how to use the database:
 
